@@ -379,7 +379,7 @@ import { useState, useEffect } from "react"
 export default function Main() {
     const [meme, setMeme] = useState({
         topText: "One does not simply",
-        // bottomText: "Walk into Mordor",
+        bottomText: "",
         imageUrl: "http://i.imgflip.com/1bij.jpg"
 
     })
@@ -397,10 +397,10 @@ function getMemeImage() {
     setMeme(prevMeme => ({
         ...prevMeme,
         imageUrl: randomMeme.url,
-        topText: randomMeme.name // set topText to the meme's name
+        topText: randomMeme.name, // set topText to the meme's name
+        bottomText: "" 
     }))
 }
-
 
     
     function handleChange(event) {
